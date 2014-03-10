@@ -1,0 +1,42 @@
+/*
+ * Map container
+ */
+.map-container, .map-container * {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box}
+.map-container {overflow: hidden; width: 919px; margin: 10px auto}
+.map-container>div {overflow: hidden; width: 919px; border: 1px solid #ccc}
+.map-container .mobile {display: none; margin-top: 0}
+
+
+<!--.map {position: relative; overflow: hidden; width: 920px; height: 1064px; margin: 0; background: #fff url('../images/map_background.png') repeat 0 0}-->
+
+.map img {position: relative; z-index: 4; margin: 0; padding: 0; width: 100%}
+.map .background {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1}
+
+.map .countries,
+.map .countries>li {position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 2; margin: 0; padding: 0}
+.map .countries>li {background: transparent none no-repeat 0 0; text-indent: -9999em}
+.map .countries>li.hover {background-position: -920px 0}
+
+.map .countries>.lika {background-image: url('../images/regiony/lika.png')}
+.map .countries>.zadar {background-image: url('../images/regiony/zadar.png')}
+.map .countries>.szybenik {background-image: url('../images/regiony/szybenik.png')}
+.map .countries>.split {background-image: url('../images/regiony/split.png')}
+.map .countries>.dubrownik {background-image: url('../images/regiony/dubrownik.png')}
+.map .countries>.istria {background-image: url('../images/regiony/istria.png')}
+.map .countries>.kvarner {background-image: url('../images/regiony/kvarner.png')}
+.map .countries>.centrum {background-image: url('../images/regiony/centrum.png')}
+.map .countries>.slawonia {background-image: url('../images/regiony/slawonia.png')}
+.map .countries>.zagrzeb {background-image: url('../images/regiony/zagrzeb.png')}
+
+
+@media only screen and (max-width: 960px) {
+	.map-container {width: auto}
+	.map-container>div {border: 0}
+	.map-container .mobile {display: block}
+	.map {width: auto; height: auto; margin-right: 0; margin-left: 0; border: 0; background: transparent}
+	.map img {display: none}
+	.map .countries,
+	.map .countries>li {position: static; list-style: decimal}
+	.map .countries {margin-top: -5px; padding-left: 40px}
+	.map .countries>li {padding: 5px 0 0 10px; background: none; text-indent: 0}
+}
